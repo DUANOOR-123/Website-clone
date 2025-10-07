@@ -1,0 +1,901 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melt Away Cleansing Oil - Complete Product Detail</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ------------------ Image Gallery Logic (Pure CSS) ------------------ */
+        /* This is the only place custom CSS is needed, as radio button state switching
+           cannot be handled purely by Tailwind classes. */
+
+        /* 1. Hide the radio inputs visually */
+        .image-gallery input[type="radio"] {
+            display: none;
+        }
+
+        /* 2. Hide all main images by default (only one is shown at a time) */
+        .main-image {
+            display: none;
+        }
+
+        /* 3. Show the correct image when its corresponding radio button is checked */
+        #thumb-1:checked~.image-display #img-1 {
+            display: block;
+        }
+
+        #thumb-2:checked~.image-display #img-2 {
+            display: block;
+        }
+
+        #thumb-3:checked~.image-display #img-3 {
+            display: block;
+        }
+
+        #thumb-4:checked~.image-display #img-4 {
+            display: block;
+        }
+
+        /* 4. Highlight the selected thumbnail */
+        #thumb-1:checked~.desktop-thumb-controls label:nth-child(1) img,
+        #thumb-2:checked~.desktop-thumb-controls label:nth-child(2) img,
+        #thumb-3:checked~.desktop-thumb-controls label:nth-child(3) img,
+        #thumb-4:checked~.desktop-thumb-controls label:nth-child(4) img,
+        #thumb-1:checked~.mobile-thumb-controls label:nth-child(1) img,
+        #thumb-2:checked~.mobile-thumb-controls label:nth-child(2) img,
+        #thumb-3:checked~.mobile-thumb-controls label:nth-child(3) img,
+        #thumb-4:checked~.mobile-thumb-controls label:nth-child(4) img {
+            border-color: #f2b8d1;
+            /* primary-pink */
+            opacity: 1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Default thumbnail styles (unselected) */
+        .desktop-thumb-controls label img,
+        .mobile-thumb-controls label img {
+            border-color: transparent;
+            opacity: 0.8;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .desktop-thumb-controls label img:hover,
+        .mobile-thumb-controls label img:hover {
+            opacity: 1;
+        }
+
+        /* Custom scrollbar for mobile thumbnails for better aesthetics */
+        .mobile-thumb-controls::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .mobile-thumb-controls::-webkit-scrollbar-thumb {
+            background-color: #f2b8d1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar for Large Screens -->
+    <nav class="hidden lg:flex items-center justify-between bg-[#f2b8d1] py-5">
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-5 ml-5">
+            <a href="https://api.whatsapp.com/send/?phone=%2B923331371383&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/whatsapp.png?v=1732087575" alt="WhatsApp"
+                    class="w-6 h-6">
+            </a>
+            <a href="https://www.facebook.com/blissfulbeautypakistan?mibextid=ZbWKwL" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/facebook.png?v=1732087575" alt="Facebook"
+                    class="w-6 h-6">
+            </a>
+            <a href="https://www.instagram.com/blissfulbeautypakistan/" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/Insta.png?v=1732087575" alt="Instagram"
+                    class="w-6 h-6">
+            </a>
+        </div>
+    
+        <!-- Middle Text -->
+        <div>
+            <h2 class="font-poppins text-lg text-white">Flat 15% OFF ON BUNDLES</h2>
+        </div>
+    
+        <!-- Search Bar -->
+        <div class="w-54 mr-5">
+            <div class="relative">
+                <input type="text" placeholder="Search..." class="w-full rounded-full border border-gray-300 bg-white py-2 pl-4 pr-10 text-sm text-gray-800 
+                       focus:border-gray-500 focus:ring-2 focus:ring-gray-500 outline-none" />
+                <button type="submit"
+                    class="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar for Small & Medium Screens -->
+    <nav class="flex lg:hidden items-center justify-center bg-[#f2b8d1] py-3">
+        <h2 class="font-poppins text-sm text-white">Flat 50% OFF</h2>
+    </nav>
+    
+    <!-- Main Navbar (Mobile Only) -->
+    <div class="relative">
+    
+        <!-- ========== MENU TOGGLE ========== -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer/menu">
+    
+        <!-- ========== Category TOGGLE ========== -->
+        <input type="checkbox" id="category-toggle" class="hidden peer/category">
+    
+        <!-- ========== Skin TOGGLE ========== -->
+        <input type="checkbox" id="skin-toggle" class="hidden peer/skin">
+    
+        <!-- ========== SEARCH TOGGLE ========== -->
+        <input type="checkbox" id="search-toggle" class="hidden peer/search">
+    
+        <!-- ========== SHOPPING TOGGLE ========== -->
+        <input type="checkbox" id="shopping-toggle" class="hidden peer/shopping">
+    
+    
+        <!-- ================== OVERLAYS ================== -->
+        <!-- Overlay for menu -->
+        <label for="menu-toggle" class="fixed inset-0 bg-black bg-opacity-30 hidden peer-checked/menu:block z-40"></label>
+        <!-- Overlay for search -->
+        <label for="search-toggle"
+            class="fixed inset-0 bg-black bg-opacity-30 hidden peer-checked/search:block z-40"></label>
+        <!-- Overlay for shopping -->
+        <label for="shopping-toggle"
+            class="fixed inset-0 bg-black bg-opacity-30 hidden peer-checked/shopping:block z-40"></label>
+        <!-- Overlay for category -->
+        <label for="category-toggle"
+            class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked/category:block z-50"></label>
+        <!-- Overlay for skin -->
+        <label for="skin-toggle" class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked/skin:block z-50"></label>
+    
+    
+        <!-- Top Navbar -->
+        <div class="lg:hidden flex items-center justify-between mt-[15px] mx-5 z-30 relative">
+    
+            <!-- Menu Icon -->
+            <label for="menu-toggle" class="cursor-pointer">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </label>
+    
+            <!-- Logo -->
+            <div>
+                <img src="https://shopblissfulbeauty.com/cdn/shop/files/FINAL_LOGO_T_2-01_1.png?v=1731915868&width=300"
+                    alt="Blissful Logo" class="w-24 h-24">
+            </div>
+    
+            <!-- Search + Cart -->
+            <div class="flex items-center space-x-8">
+                <!-- Search Icon -->
+                <label for="search-toggle" class="cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                </label>
+                <!-- Cart Icon -->
+                <label for="shopping-toggle" class="cursor-pointer">
+                    <i class="fa-solid fa-bag-shopping text-2xl"></i>
+                </label>
+            </div>
+        </div>
+    
+    
+        <!-- ========== SIDEBAR MENU ========== -->
+        <ul
+            class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg transform -translate-x-full peer-checked/menu:translate-x-0 transition-transform z-50 p-5 space-y-3">
+            <li class="py-2 text-lg text-black">Menu</li>
+            <li><a href="#" class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg block text-center">Home</a>
+            </li>
+            <li><a href="./shopall.html"
+                    class="bg-[#f2b8d1]  text-white hover:underline px-4 py-2 rounded-lg block text-center">Shop All</a>
+            </li>
+            <li>
+                <label for="category-toggle"
+                    class="bg-[#f2b8d1] text-white hover:underline  px-4 py-2 rounded-lg flex justify-between items-center cursor-pointer">
+                    <span>Shop by Category</span><span>→</span>
+                </label>
+            </li>
+            <li>
+                <label for="skin-toggle"
+                    class="bg-[#f2b8d1] text-white hover:underline  px-4 py-2 rounded-lg flex justify-between items-center cursor-pointer">
+                    <span>Shop by Skin Concern</span><span>→</span>
+                </label>
+            </li>
+            <li><a href="./bundles.html"
+                    class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg block text-center">Bundles</a></li>
+            <li><a href="./about.html"
+                    class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg block text-center">About
+                    Us</a></li>
+            <li><a href="./contact.html"
+                    class="bg-[#f2b8d1] text-white hover:underline  px-4 py-2 rounded-lg block text-center">Contact
+                    Us</a></li>
+            <hr>
+            <li>
+                <a href="./index.html" class="flex items-center space-x-2">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span>Sign In</span>
+                </a>
+            </li>
+    
+            <li <a href="./index.html" class="flex items-center space-x-2">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Create an Account</span>
+                </a>
+            </li>
+            <hr>
+            <li class="flex items-center space-x-2"><i class="fa-regular fa-heart"></i><span>My Wish List</span></li>
+        </ul>
+    
+    
+        <!-- ========== SIDEBAR CATEGORY ========== -->
+        <aside
+            class="fixed top-0 left-0 w-80 h-full bg-white  shadow-lg transform -translate-x-full peer-checked/category:translate-x-0 transition-transform z-[60] p-5 overflow-auto">
+            <div class="flex items-center justify-start mb-4 gap-4">
+                <label for="category-toggle" class="cursor-pointer text-xl font-bold">Shop by Category</label>
+                <h2 class="text-lg  text-white hover:underline font-bold">Shop by Category</h2>
+            </div>
+            <hr>
+            <nav class="space-y-2">
+                <a href="./toners.html" class="block px-4 py-2 hover:underline bg-white text-black  ">Toners</a>
+                <hr>
+                <a href="./serums.html" class="block px-4 py-2 hover:underline bg-white  text-black ">Serums</a>
+                <hr>
+                <a href="./mosturisers.html" class="block px-4 py-2 hover:underline bg-white  text-black  ">Moisturisers</a>
+                <hr>
+                <a href="./cleansers.html" class="block px-4 py-2 hover:underline bg-white  text-black">Cleansers</a>
+                <hr>
+                <a href="./sunscreens.html" class="block px-4 py-2 hover:underline bg-white text-black ">Sunscreen</a>
+                <hr>
+            </nav>
+        </aside>
+    
+    
+        <!-- ========== SIDEBAR SKIN ========== -->
+        <aside
+            class="fixed top-0 left-0 bg-white w-80 h-full shadow-lg transform -translate-x-full peer-checked/skin:translate-x-0 transition-transform z-[70] p-5 overflow-auto">
+            <div class="flex items-center justify-start mb-4 gap-4">
+                <label for="skin-toggle" class="cursor-pointer text-2xl font-bold">←</label>
+                <h2 class="text-lg hover:underline text-black  font-bold">Shop by Skin Concern</h2>
+            </div>
+            <hr>
+            <nav class="space-y-2">
+                <a href="./dehydartion&dryness.html" class="block px-4 py-2 hover:underline bg-white text-black">Dehydration
+                    &
+                    Dryness</a>
+                <hr>
+                <a href="./dullness&uneventone.html" class="block px-4 py-2 2 hover:underline bg-white text-black ">Dullness
+                    &
+                    Uneven tone</a>
+                <hr>
+                <a href="./Breakouts&acne.html" class="block px-4 py-2 hover:underline bg-white text-black">Breakouts &
+                    Acne</a>
+                <hr>
+                <a href="./texturepores&oilyskin.html"
+                    class="block px-4 py-2 hover:underline bg-white  text-black">Textures,Pores &
+                    oily skin</a>
+                <hr>
+                <a href="./Darkspot&discoloration.html"
+                    class="block px-4 py-2 hover:underline bg-white  text-black">Darkspores &
+                    Discoloration</a>
+                <hr>
+                <a href="./healthyaging.html" class="block px-4 py-2 hover:underline bg-white text-black">Healthy Aging</a>
+                <hr>
+                <a href="./Makeupremoving&deepcleaning.html"
+                    class="block px-4 py-2 hover:underline bg-white text-black ">Makeup Removing
+                    & Deep cleaning</a>
+                <hr>
+                <a href="./sunprotection.html" class="block px-4 py-2 hover:underline bg-white text-black">Sun
+                    Protection</a>
+                <hr>
+            </nav>
+        </aside>
+    
+    
+        <!-- ========== SIDEBAR SEARCH ========== -->
+        <ul
+            class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full peer-checked/search:translate-x-0 transition-transform z-50 p-5 space-y-3">
+            <li class="py-2 text-lg text-black">Search</li>
+            <li>
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-full border border-gray-300 py-2 pl-4 pr-10 text-sm text-gray-800 focus:border-gray-500 focus:ring-2 focus:ring-gray-500 outline-none" />
+                    <button type="submit"
+                        class="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    
+    
+        <!-- ========== SIDEBAR SHOPPING ========== -->
+        <ul
+            class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full peer-checked/shopping:translate-x-0 transition-transform z-50 p-5 space-y-3">
+            <li class="py-2 text-lg text-black">Shopping cart</li>
+        </ul>
+    </div>
+    
+    
+    <!-- For larger screens -->
+    <nav class="hidden lg:flex bg-white p-6 flex-col items-center">
+        <!-- Logo -->
+        <div class="flex items-center mb-4">
+            <img src="https://shopblissfulbeauty.com/cdn/shop/files/FINAL_LOGO_T_2-01_1.png?v=1731915868&width=300"
+                alt="Blissful Logo" class="w-24 h-34">
+        </div>
+    
+        <!-- Navbar Links -->
+        <div class="flex space-x-5">
+    
+            <!-- Home -->
+            <a href="index.html">
+                <button class="bg-[#f2b8d1] text-white hover:underline  px-4 py-2 rounded-lg">Home</button>
+            </a>
+    
+            <!-- Shop All -->
+            <a href="./shopall.html">
+                <button class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg">Shop All</button>
+            </a>
+    
+            <!-- Shop by Category (Dropdown) -->
+            <div class="relative group inline-block">
+                <!-- Button -->
+                <button class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg">
+                    Shop by Category
+                </button>
+    
+                <!-- Dropdown (fixed) -->
+                <div class="absolute left-0 top-full w-48 bg-white border rounded-lg shadow-lg
+                       opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto
+                       transition-opacity duration-300 ease-in-out z-50">
+    
+                    <a href="./toners.html" class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white  ">Toners</a>
+                    <a href="./serums.html" class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white ">Serums</a>
+                    <a href="./mosturisers.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white  ">Moisturisers</a>
+                    <a href="./cleansers.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white ">Cleansers</a>
+                    <a href="./sunscreens.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white ">Sunscreen</a>
+    
+                </div>
+            </div>
+    
+            <!-- Shop by Skin Concern (Dropdown) -->
+            <div class="relative group inline-block">
+                <!-- Button -->
+                <button class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg">
+                    Shop by Skin Concern
+                </button>
+    
+                <!-- Dropdown (fixed) -->
+                <div class="absolute left-0 top-full w-56 bg-white border rounded-lg shadow-lg
+                    opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto
+                    transition-opacity duration-200 ease-in-out z-50">
+    
+                    <a href="./dehydartion&dryness.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Dehydration
+                        & Dryness</a>
+                    <a href="./dullness&uneventone.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Dullness
+                        & Uneven
+                        tone</a>
+                    <a href="./Breakouts&acne.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Breakouts &
+                        Acne</a>
+                    <a href="./texturepores&oilyskin.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Textures,
+                        Pores &
+                        Oily Skin</a>
+                    <a href="./Darkspot&discoloration.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Dark
+                        Spots &
+                        Discoloration</a>
+                    <a href="./healthyaging.html" class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Healthy
+                        Aging</a>
+                    <a href="./Makeupremoving&deepcleaning.html"
+                        class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Makeup
+                        Removing
+                        & Deep Cleaning</a>
+                    <a href="./sunprotection.html" class="block px-4 py-2 hover:underline bg-[#f2b8d1] text-white">Sun
+                        Protection</a>
+                </div>
+            </div>
+    
+    
+            <!-- Bundles -->
+            <a href="./bundles.html">
+                <button class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg">Bundles</button>
+            </a>
+    
+            <!-- About Us -->
+            <a href="./about.html">
+                <button class="bg-[#f2b8d1] text-white hover:underline px-4 py-2 rounded-lg">About Us</button>
+            </a>
+    
+            <!-- Contact Us -->
+            <a href="./contact.html">
+                <button class="bg-[#f2b8d1] text-white hover:underline  px-4 py-2 rounded-lg">Contact Us</button>
+            </a>
+    
+        </div>
+    </nav>
+
+
+
+
+    <!-- Main Product Detail Section -->
+    <main class="max-w-7xl mx-auto px-4 py-8 md:py-16">
+
+        <!-- Product Purchase Information (Image + Details) -->
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 pb-12 md:pb-16 border-b border-gray-200">
+
+            <!-- LEFT SIDE: IMAGE GALLERY -->
+            <div class="md:col-span-1">
+                <div class="image-gallery flex gap-4">
+
+                    <!-- Hidden Radio Buttons for Image Switching -->
+                    <input type="radio" id="thumb-1" name="image-select" checked>
+                    <input type="radio" id="thumb-2" name="image-select">
+                    <input type="radio" id="thumb-3" name="image-select">
+                    <input type="radio" id="thumb-4" name="image-select">
+
+                    <!-- Desktop Thumbnails (Vertical) - Hidden on Mobile -->
+                    <div class="desktop-thumb-controls hidden md:flex flex-col space-y-3 w-16 lg:w-20 flex-shrink-0">
+                        <label for="thumb-1"><img
+                                src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                                alt="Thumbnail 1"
+                                class="w-full h-16 lg:h-20 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                        <label for="thumb-2"><img
+                                src="https://shopblissfulbeauty.com/cdn/shop/files/38_b8856340-6e42-456c-bb84-62b2fa4ad9ae.png?v=1759140557"
+                                alt="Thumbnail 2"
+                                class="w-full h-16 lg:h-20 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                        <label for="thumb-3"><img
+                                src="https://shopblissfulbeauty.com/cdn/shop/files/23.png?v=1759140557"
+                                alt="Thumbnail 3"
+                                class="w-full h-16 lg:h-20 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                        <label for="thumb-4"><img
+                                src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                                alt="Thumbnail 4"
+                                class="w-full h-16 lg:h-20 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                    </div>
+
+                    <!-- Main Image Display Area (Responsive Aspect Ratio) -->
+                    <div
+                        class="image-display flex-grow relative overflow-hidden rounded-xl shadow-xl aspect-[4/5] md:aspect-[3/4]">
+                        <img id="img-1" src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                            alt="Melt Away Cleansing Oil Main Image 1"
+                            class="main-image w-full h-full object-cover absolute top-0 left-0 bg-white">
+                        <img id="img-2"
+                            src="https://shopblissfulbeauty.com/cdn/shop/files/38_b8856340-6e42-456c-bb84-62b2fa4ad9ae.png?v=1759140557"
+                            alt="Melt Away Cleansing Oil Main Image 2"
+                            class="main-image w-full h-full object-cover absolute top-0 left-0 bg-white">
+                        <img id="img-3" src="https://shopblissfulbeauty.com/cdn/shop/files/23.png?v=1759140557"
+                            alt="Melt Away Cleansing Oil Main Image 3"
+                            class="main-image w-full h-full object-cover absolute top-0 left-0 bg-white">
+                        <img id="img-4" src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                            alt="Melt Away Cleansing Oil Main Image 4"
+                            class="main-image w-full h-full object-cover absolute top-0 left-0 bg-white">
+                    </div>
+                </div>
+
+                <!-- Mobile Thumbnails (Horizontal Scroll) - Hidden on Desktop -->
+                <div class="mobile-thumb-controls flex md:hidden space-x-3 mt-4 overflow-x-auto whitespace-nowrap pb-2">
+                    <label for="thumb-1" class="flex-shrink-0"><img
+                            src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                            alt="Mobile Thumbnail 1"
+                            class="w-16 h-16 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                    <label for="thumb-2" class="flex-shrink-0"><img
+                            src="https://shopblissfulbeauty.com/cdn/shop/files/38_b8856340-6e42-456c-bb84-62b2fa4ad9ae.png?v=1759140557"
+                            alt="Mobile Thumbnail 2"
+                            class="w-16 h-16 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                    <label for="thumb-3" class="flex-shrink-0"><img
+                            src="https://shopblissfulbeauty.com/cdn/shop/files/23.png?v=1759140557"
+                            alt="Mobile Thumbnail 3"
+                            class="w-16 h-16 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                    <label for="thumb-4" class="flex-shrink-0"><img
+                            src="https://shopblissfulbeauty.com/cdn/shop/files/36.png?v=1759140557"
+                            alt="Mobile Thumbnail 4"
+                            class="w-16 h-16 bg-white object-cover rounded-lg border-2 cursor-pointer"></label>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE: PRODUCT DETAILS -->
+            <div class="md:col-span-1 space-y-7">
+
+                <!-- Title and Rating -->
+                <div class="space-y-2">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Melt Away Cleansing Oil
+                    </h1>
+                    <div class="flex items-center text-sm">
+                        <span class="text-primary-pink space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="ml-2 text-gray-500 hover:text-primary-pink cursor-pointer font-medium">(191
+                            reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Product Description Snippet -->
+                <p class="text-gray-600 leading-relaxed text-base">
+                    Our Melt Away Cleansing Oil is a lightweight, nourishing formula designed to dissolve makeup,
+                    sunscreen, and daily impurities with ease. Enriched with a blend of natural oils and skin-loving
+                    ingredients, it deeply cleanses without stripping the skin, leaving it soft, refreshed, and
+                    balanced. Perfect as the first step of your..
+                </p>
+
+                <!-- Price and Subtotal -->
+                <div class="space-y-3">
+                    <div class="text-3xl font-extrabold text-gray-900">
+                        Rs. 2,650.00
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="space-y-3">
+                    <span class="font-semibold text-gray-700 block">Size:</span>
+                    <div class="flex space-x-3">
+                        <button
+                            class="px-5 py-2 text-sm border-2 border-primary-pink bg-primary-pink/20 rounded-lg font-medium text-gray-800 shadow-sm transition-all duration-200">
+                            30ml
+                        </button>
+                        <!-- Example of an unselected size -->
+                        <button
+                            class="px-5 py-2 text-sm border border-gray-300 hover:border-primary-pink rounded-lg font-medium text-gray-600 hover:text-gray-800 transition-all duration-200">
+                            50ml
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Purchase Options (Quantity, Cart, Wishlist) -->
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-end space-x-4">
+
+                        <!-- Quantity Selector -->
+                        <div
+                            class="flex border border-gray-300 rounded-lg overflow-hidden w-full sm:w-auto flex-shrink-0 max-w-[120px]">
+                            <button class="px-3 py-2 text-gray-600 bg-gray-50 hover:bg-gray-200 transition-colors"><i
+                                    class="fas fa-minus"></i></button>
+                            <input type="text" value="1"
+                                class="w-12 text-center text-lg border-x border-gray-300 text-gray-800 font-medium focus:outline-none"
+                                readonly>
+                            <button class="px-3 py-2 text-gray-600 bg-gray-50 hover:bg-gray-200 transition-colors"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+
+                        <!-- Add to Cart Button -->
+                        <button
+                            class="flex-grow flex items-center justify-center space-x-2 bg-[#f2b8d1] text-white text-base font-semibold py-3 px-6 rounded-lg hover:bg-pink-300 shadow-lg transition-colors transform hover:scale-[1.01]">
+                            <i class="fas fa-shopping-bag mr-2"></i> ADD TO CART
+                        </button>
+
+                        <!-- Wishlist Button -->
+                        <button
+                            class="p-3 border border-gray-300 text-gray-600 rounded-lg hover:text-red-500 hover:border-red-500 w-12 h-12 flex items-center justify-center flex-shrink-0 transition-colors">
+                            <i class="far fa-heart text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Subtotal Display (Desktop/Tablet visibility) -->
+                    <div class="flex justify-between items-center text-lg pt-2 border-t border-gray-100">
+                        <span class="font-semibold text-gray-700">Subtotal:</span>
+                        <span class="font-bold text-gray-900">Rs. 2,650.00</span>
+                    </div>
+
+                    <!-- Buy Now Button -->
+                    <button
+                        class="w-full  text-white  text-base font-semibold py-3 px-6 rounded-lg bg-[#f2b8d1] hover:bg-pink-300 shadow-md transition-all duration-300">
+                        BUY IT NOW
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Description and Info Tabs -->
+        <section class="mt-16 bg-white p-4 sm:p-8  ">
+
+            <div class="max-w-4xl mx-auto space-y-12">
+
+                <!-- 1. Description -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Description</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our Melt Away Cleansing Oil is a lightweight, nourishing formula designed to dissolve makeup,
+                        sunscreen, and daily impurities with ease. Enriched with a blend of natural oils and skin-loving
+                        ingredients, it deeply cleanses without stripping the skin, leaving it soft, refreshed, and
+                        balanced. Perfect as the first step of your double-cleansing routine.
+                    </p>
+                </div>
+
+                <!-- 2. Key Ingredients -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Key Ingredients</h3>
+                    <ul class="space-y-3 text-gray-700 list-disc pl-5">
+                        <li>
+                            <strong class="font-medium text-gray-800">Squalane:</strong> Hydrates and balances without
+                            clogging pores
+                        </li>
+                        <li>
+                            <strong class="font-medium text-gray-800">Oryza Sativa (Rice Bran) Oil:</strong> Rich in
+                            antioxidants and vitamins for a radiant glow
+                        </li>
+                        <li>
+                            <strong class="font-medium text-gray-800">Jojoba & Macadamia Oils:</strong> Nourish and
+                            restore suppleness
+                        </li>
+                        <li>
+                            <strong class="font-medium text-gray-800">Olive & Sunflower Oils:</strong> Provide deep yet
+                            gentle cleansing
+                        </li>
+                        <li>
+                            <strong class="font-medium text-gray-800">Vitamin E (Tocopherol):</strong> Protects the skin
+                            with antioxidant benefits
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Benefits -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Benefits</h3>
+                    <ul class="space-y-3 text-gray-700 list-disc pl-5">
+                        <li>
+                            <p>Gently removes makeup, sunscreen, and impurities</p>
+                        </li>
+                        <li>
+                            <p>Hydrates and nourishes with squalane and botanical oils</p>
+                        </li>
+                        <li>
+                            <p>Lightweight formula that rinses off without residue</p>
+                        </li>
+                        <li>
+                            <p>Antioxidant-rich to help protect and soothe the skin</p>
+                        </li>
+                        <li>
+                            <p>Leaves skin soft, refreshed, and balanced</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. How to Use -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">How to Use</h3>
+                    <ul class="space-y-3 text-gray-700 list-disc pl-5">
+                        <li>
+                            <p>Massage 2–3 pumps onto dry skin, focusing on areas with makeup or sunscreen.</p>
+                        </li>
+                        <li>
+                            <p>Add a splash of water to emulsify into a milky texture, then rinse thoroughly.</p>
+                        </li>
+                        <li>
+                            <p>Follow with your favorite water-based cleanser for best results.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 5. Ingredients List -->
+                <div class="space-y-4 pt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Ingredients</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Squalane, Isopropyl Myristate, Oryza Sativa Bran Oil, Caprylic/Capric Triglyceride, Helianthus
+                        Annuus Seed Oil, Olea Europaea (Olive) Fruit Oil, Sorbeth-30 Tetraoleate, Simmondsia Chinensis
+                        (Jojoba) Seed Oil, Macadamia Integrifolia Seed Oil, Tocopherol, Ethylhexylglycerin,
+                        Phenoxyethanol.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+<!-----------------Last Section-------------------->
+<!------------------------------------------------>
+
+<!-- START: Main Footer Component -->
+<!-- Footer uses the custom pink background color and Poppins font for titles -->
+<footer class="bg-[#f2b8d1] pt-16">
+    <div class="container mx-auto px-6 lg:px-12">
+
+        <!-- Newsletter Signup Section: "GET LATEST STORIES" -->
+        <div class="max-w-xl mx-auto text-center pb-12 lg:pb-20">
+            <h3 class="text-xl font-bold font-poppins tracking-widest uppercase mb-2 text-white">GET LATEST STORIES</h3>
+            <p class="text-lg font-poppins text-white font-light mb-8">
+                Share store details, promotions, or brand content with your customers.
+            </p>
+            <form class="flex justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2">
+                <!-- Input field -->
+                <input type="email" placeholder="Enter your email address" aria-label="Enter your email address"
+                    class="w-full sm:w-80 p-4 border border-gray-300 rounded-none focus:outline-none focus:ring-0 text-sm placeholder-gray-500">
+                <!-- Submit button -->
+                <button type="submit"
+                    class="w-full sm:w-28 p-4 bg-black text-white font-semibold text-sm rounded-none tracking-widest hover:bg-gray-800 transition duration-150">
+                    SUBMIT
+                </button>
+            </form>
+        </div>
+
+        <!-- Main Content Grid: Logo, Quick Links, User Info, Contact Info -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-10 pb-16 lg:pb-20 border-t border-pink-400/30">
+
+            <!-- Column 1: Blissful Logo & Brand Name (Always Visible) -->
+            <div
+                class="lg:col-span-1 flex flex-col items-start lg:items-start order-1 lg:order-1 col-span-full md:col-span-1">
+                <!-- Logo: Image logo with URL provided by the user -->
+                <img src="https://shopblissfulbeauty.com/cdn/shop/files/LOGO_420x.png?v=1732087575"
+                    alt="Blissful Beauty Logo" class="w-24 h-auto mb-2"
+                    onerror="this.onerror=null; this.src='https://placehold.co/96x96/f2b8d1/4a4a4a?text=BLISSFUL+LOGO'">
+
+            </div>
+
+            <!-- Column 2: Quick Links (Accordion on mobile, static on md+) -->
+            <div class="lg:col-span-1 order-2 lg:order-2 col-span-full md:col-span-1">
+
+                <!-- 1. ACCORDION VIEW: Visible ONLY on small screens (mobile) -->
+                <div class="md:hidden">
+                    <details>
+                        <!-- list-none hides the default marker in most modern browsers. -->
+                        <summary
+                            class="py-4 border-b border-pink-400/30 cursor-pointer flex justify-between items-center list-none">
+                            <h4 class="text-white font-bold font-poppins tracking-widest uppercase">
+                                QUICK LINKS
+                            </h4>
+                            <!-- Plus icon is only visible here, on small screens -->
+                            <i class="fa-solid fa-plus text-white transition-transform duration-300"></i>
+                        </summary>
+
+                        <!-- Content (Toggled by <details> open/close state) -->
+                        <div class="pb-4 pt-1">
+                            <ul class="space-y-3 text-white text-sm">
+                                <li><a href="#" class="hover:text-black transition">Home</a></li>
+                                <li><a href="#" class="hover:text-black transition">Shop All</a></li>
+                                <li><a href="./about" class="hover:text-black transition">About Us</a></li>
+                                <li><a href="./contact.html" class="hover:text-black transition">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 2. STATIC VIEW: Visible ONLY on medium screens and up (tablet/desktop) -->
+                <div class="hidden md:block">
+                    <h4 class="text-white font-bold font-poppins tracking-widest uppercase mb-4">
+                        QUICK LINKS
+                    </h4>
+                    <!-- Content is always visible on MD+ -->
+                    <div class="pb-4 pt-1 lg:pt-0">
+                        <ul class="space-y-3 text-white text-sm">
+                            <li><a href="#" class="hover:text-black transition">Home</a></li>
+                            <li><a href="#" class="hover:text-black transition">Shop All</a></li>
+                            <li><a href="./about.html" class="hover:text-black transition">About Us</a></li>
+                            <li><a href="./contact.html" class="hover:text-black transition">Contact Us</a></li>
+                        </ul>
+                    </div>--
+                </div>
+            </div>
+
+            <!-- Column 3: User Info (Accordion on mobile, static on md+) -->
+            <div class="lg:col-span-1 order-3 lg:order-3 col-span-full md:col-span-1">
+
+                <!-- 1. ACCORDION VIEW: Visible ONLY on small screens (mobile) -->
+                <div class="md:hidden">
+                    <details>
+                        <!-- list-none hides the default marker in most modern browsers. -->
+                        <summary
+                            class="py-4 border-b border-pink-400/30 cursor-pointer flex justify-between items-center list-none">
+                            <h4 class="text-white font-poppins font-bold tracking-widest uppercase">
+                                USER INFO
+                            </h4>
+                            <!-- Plus icon is only visible here, on small screens -->
+                            <i class="fa-solid fa-plus text-white transition-transform duration-300"></i>
+                        </summary>
+
+                        <!-- Content (Toggled by <details> open/close state) -->
+                        <div class="pb-4 pt-1">
+                            <ul class="space-y-3 text-white text-sm">
+                                <li><a href="#" class="hover:text-black transition">Privacy Policy</a></li>
+                                <li><a href="#" class="hover:text-black transition">Terms Of Service</a></li>
+                                <li><a href="#" class="hover:text-black transition">Refund Policy</a></li>
+                                <li><a href="#" class="hover:text-black transition">Shipping Policy</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 2. STATIC VIEW: Visible ONLY on medium screens and up (tablet/desktop) -->
+                <div class="hidden md:block">
+                    <h4 class="text-white font-poppins font-bold tracking-widest uppercase mb-4">
+                        USER INFO
+                    </h4>
+                    <!-- Content is always visible on MD+ -->
+                    <div class="pb-4 pt-1 lg:pt-0">
+                        <ul class="space-y-3 text-white text-sm">
+                            <li><a href="#" class="hover:text-black transition">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-black transition">Terms Of Service</a></li>
+                            <li><a href="#" class="hover:text-black transition">Refund Policy</a></li>
+                            <li><a href="#" class="hover:text-black transition">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact Info (Always Visible - No Accordion) -->
+            <!-- Contact info remains as a visible block, but also spans full width on small screens -->
+            <div class="lg:col-span-1 order-4 lg:order-4 col-span-full md:col-span-1">
+                <div class="py-4 border-b border-pink-400/30 lg:border-none">
+                    <h4 class="text-white font-poppins font-bold tracking-widest uppercase mb-4">
+                        CONTACT INFO
+                    </h4>
+                    <ul class="space-y-4 text-white font-poppins text-sm">
+                        <!-- Location Detail - Font Awesome Icon -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot w-4 h-4 mr-3 mt-1"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <!-- Phone Detail - Font Awesome Icon -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone w-4 h-4 mr-3 mt-1"></i>
+                            <span>+92 333 1371383</span>
+                        </li>
+                        <!-- Email Detail - Font Awesome Icon -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope w-4 h-4 mr-3 mt-1"></i>
+                            <span>blissfulbeautypakistan@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Social Media Icons Section -->
+        <div class="border-t border-pink-400/30 pt-8 pb-4">
+            <!-- Social Icons (Centered) -->
+            <div class="flex justify-center space-x-4 mb-4">
+                <!-- WhatsApp Icon (using image from your latest code snippet) -->
+                <a href="https://api.whatsapp.com/send/?phone=%2B923331371383&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/whatsapp.png?v=1732087575"
+                        alt="WhatsApp" class="w-6 h-6">
+                </a>
+                <!-- Facebook Icon (using image from your latest code snippet) -->
+                <a href="https://www.facebook.com/blissfulbeautypakistan?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/facebook.png?v=1732087575"
+                        alt="Facebook" class="w-6 h-6">
+                </a>
+                <!-- Instagram Icon (using image from your latest code snippet) -->
+                <a href="https://www.instagram.com/blissfulbeautypakistan/" target="_blank">
+                    <img src="https://cdn.shopify.com/s/files/1/0721/8639/6974/files/Insta.png?v=1732087575"
+                        alt="Instagram" class="w-6 h-6">
+                </a>
+            </div>
+
+            <!-- Copyright Text (Centered) -->
+            <p class="text-xs text-white font-poppins text-center pb-4">
+                "Designed & Developed By Potato Logics"
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- END: Main Footer Component -->
+
+
+
+    </main>
